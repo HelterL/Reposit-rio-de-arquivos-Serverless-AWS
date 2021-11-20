@@ -50,8 +50,9 @@ Siga os seguintes passos abaixo:
 ![img](./IMG/iam_keys_acess.png)
 
 ## Entrar com as credenciais do usuário IAM através do comando:
+Utilizando o prompt de comando, utilize o comando a seguir para configurar as credenciaciais no AWS CLI.
 `aws configure`<br>
-No campo *Default region name* vamos utilizar a região **us-east-1** Leste dos EUA (Norte da Virgínia)
+No campo *Default region name* vamos utilizar a região **us-east-1** Leste dos EUA (Norte da Virgínia).
 
 ```
 aws configure
