@@ -5,19 +5,19 @@
 
 As etapas a seguir permitem que você instale o Nodejs e o framework *Serverless* no windows.
 
-1. Fazer o download e executar o instalador MSI no Windows.
+1. Fazer o download e executar o instalador MSI no Windows.<br>
 ![img](./IMG/msi_nodejs.png)
 
-2. Aceitar os termos de uso do Nodejs.
+2. Aceitar os termos de uso do Nodejs.<br>
 ![img](./IMG/terms_nodejs.png)
 
-3. Pasta de destino e armazenamento do programa.
+3. Pasta de destino e armazenamento do programa.<br>
 ![img](./IMG/pasta_destinonodejs.png)
 
-4. customização de instalação.
+4. customização de instalação.<br>
 ![img](./IMG/custom_installation_nodejs.png)
 
-5. Finalização da instalação.
+5. Finalização da instalação.<br>
 ![img](./IMG/finish_installation_nodejs.png)
 
 6. Instalando framework *Serverless* pela linha de comando utilizando o gerenciador de pacotes do nodejs o **npm**<br>
