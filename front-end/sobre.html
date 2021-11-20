@@ -1,0 +1,92 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Biblioteca Serverless">
+        <meta name="author" content="Helter Pitanga">
+        <title>Library Serverless</title>
+       <!-- Latest compiled and minified CSS -->
+
+       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+       integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+     <link rel="stylesheet" href="../css/estiloso.css" />
+   
+   
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+       integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+       integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+       crossorigin="anonymous"></script>
+     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+       integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+       crossorigin="anonymous"></script>
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+       integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+       crossorigin="anonymous"></script>
+</head>
+    <body>
+      <header>
+        <div class="container" id="nav-container">
+          <nav class="navbar navbar-expand-lg fixed-top  bg-primary">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-links"
+              aria-controls="navbar-links" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end container-fluid" id="navbar-links">
+              <div class="navbar-nav">
+                <a class="nav-item nav-link active" id="home-menu" href="../front-end/index.html"> Home</a>
+            <a class="nav-item nav-link" id="sobre-menu" href="../front-end/sobre.html"> Sobre</a>
+            <a class="nav-item nav-link" id="login-menu" href="../front-end/login.html"> Login</a>
+            <a class="nav-item nav-link" id="cadastrar-menu" href="../front-end/register.html"> Cadastrar</a>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </header>
+      <div class="space-small">
+        <div class="container">
+            <!-- about-head -->
+            <div class="row">
+                <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12 mb60">
+                    <div class="">
+                        <h3> O que é? </h3>
+                    </div>
+                </div>
+                <div class="col-xl-8 col-lg-8 offset-md-1 col-md-8 col-sm-12 col-12 mb60">
+                    <div class="">
+                        <p class="lead text-justify"> <i>Site</i> criado no paradigma <i>Serverless</i>, pelo aluno Helter Pitanga para trabalho de conclusão de curso TCC 2. A aplicação se tratar de
+                         um repósitorio de artigos com os sufixos .pdfs, utilizando serviços da nuvem do provedor de serviços Amazon AWS.       
+                        </p>
+                        
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12 mb60">
+                    <div class="">
+                        <h3> O que é Serverless? </h3>
+                    </div>
+                </div>
+                <div class="col-xl-8 col-lg-8 offset-md-1 col-md-8 col-sm-12 col-12 mb60">
+                    <div class="">
+                        <p class="lead text-justify"> A arquitetura serverless representa um modelo de hospedagem para funções que não necessita configuração do servidor, ou seja, todas dependências para que sua aplicação rode já estão instaladas de forma nativa.</p>
+                        <p class="lead text-justify">Essas funções podem ser "disparadas" de duas maneiras: Rotas HTTP assim como estamos acostumados em serviços REST comuns ou eventos disparados por outros serviços existentes.</p> 
+                        <p class="lead text-justify">Geralmente a arquitetura serverless é utilizada para processar códigos assíncronos que não tem necessidade de execução imediata e que podem causar um processamento desnecessário na aplicação principal hospedada em servidores comuns.</p>
+                        <p class="lead text-justify">Importante frisar que toda função que utiliza esse modelo possui um limite de tempo de execução e é extremamente difícil de debugar ou testar, por isso, é importante que o serviço seja extremamente simples e tenha um objetivo bem definido com poucos efeitos colaterais.</p>
+                        <p class="lead text-justify">Além disso, esses serviços são stateless e, por isso, não devem guardar nenhum estado entre cada execução pois cada nova execução pode reconstruir o servidor do total zero sem resquícios de uma execução anterior. </p>
+                        <footer class="blockquote-footer"><cite>Diego Fernandes</cite>  co-fundador e CTO na Rocketseat.</footer>
+                    </div>
+                </div>
+            </div>
+                        <!-- contact-section -->
+
+                        <blockquote class="blockquote text-center">
+                          <footer class="blockquote-footer">
+                            <div class="content">
+                              <p>
+                                Exemplo de <i>site</i> criado no paradigma <i>Serverless</i> por Helter Pitanga.
+                              </p>
+                            </div>
+                          </footer>
+                        </blockquote>
+                      
+    </body>
+</html>

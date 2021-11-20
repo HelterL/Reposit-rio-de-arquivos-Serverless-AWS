@@ -1,0 +1,216 @@
+service: bibliotecaserverless
+
+plugins:
+  - serverless-dotenv-plugin
+  - serverless-stack-output
+  - serverless-s3-remover
+useDotenv: true
+
+configValidationMode: off
+
+frameworkVersion: "2"
+
+custom:
+  bucket: ${env:BUCKET_NAME}
+  DBNameRDS: ${env:DB_NAME}
+  MasteruserRDS: ${env:USER_NAME_DB}
+  PassworduserRDS: ${env:USER_PASSWORD_DB}
+  defaultStage: dev
+  currentStage: ${opt:stage, self:custom.defaultStage}
+  userPoolName: test-user-pool-${self:custom.currentStage}
+  userPoolClientName: test-user-pool-client-${self:custom.currentStage}
+  remover:
+    buckets: 
+      - ${self:custom.bucket}
+  output:
+    file: outputs.toml
+    
+provider:
+  environment:
+    Bucket: ${self:custom.bucket}
+    DatabaseName: ${self:custom.DBNameRDS}
+    DatabaseUser: ${self:custom.MasteruserRDS}
+    DatabasePassword: ${self:custom.PassworduserRDS}
+    RDSEndpoint:
+      Fn::GetAtt: [ DBinstanceRDSMysql, Endpoint.Address ]
+  name: aws
+  endpointType: REGIONAL
+  runtime: nodejs14.x
+  stage: dev
+  region: us-east-1
+  memorySize: 512
+  lambdaHashingVersion: 20201221
+  iamRoleStatements:
+    - Effect: Allow
+      Action:
+        - s3:GetObject
+        - s3:PutObject
+        - s3:ListBucket
+        - s3:ListObject
+      Resource:        
+        - arn:aws:s3:::${self:custom.bucket}/*
+    - Effect: Allow
+      Action:
+        - sns:Publish
+        - sns:Subscribe
+      Resource: "*" 
+
+functions:
+  objetocriado:
+    handler: handler.objetocriado
+    events:
+      - s3:
+          bucket: ${self:custom.bucket}
+          event: s3:ObjectCreated:*
+          private: false
+          cors: true
+          rules:
+            - prefix: Artigos/
+            - suffix: .pdf
+  consultardb:
+    handler: handler.consultardb
+    events:
+      - http:
+          path: api_mysql
+          method: get
+          integration: lambda
+          private: false
+          cors: true
+  listar:
+      handler: handler.listar
+      events:
+        - http:
+            path: api_list
+            method: get
+            integration: lambda
+            private: false
+            cors: true
+  enviarsms:
+      handler: handler.enviarsms
+      events:
+        - http:
+            path: api_sms
+            method: get
+            integration: lambda
+            private: false
+            cors: true
+            request:
+              template:
+                application/json: '{ "phone" : "$input.params(''phone'')", "personalname" : "$input.params(''personalname'')" }'
+
+resources:
+  Resources:
+    CognitoUserPool:
+      Type: "AWS::Cognito::UserPool"
+      Properties:
+        MfaConfiguration: OFF
+        UserPoolName: ${self:custom.userPoolName}
+        UsernameAttributes: [email]
+        AutoVerifiedAttributes:
+          - email
+        Schema:
+          - Name: email
+            Required: true
+            Mutable: true
+        UsernameConfiguration:
+          CaseSensitive: false
+        Policies:
+          PasswordPolicy:
+            MinimumLength: 8
+            RequireLowercase: True
+            RequireNumbers: True
+            RequireSymbols: True
+            RequireUppercase: True
+            TemporaryPasswordValidityDays: 31
+        AccountRecoverySetting:
+            RecoveryMechanisms: 
+            - Name: "verified_email" 
+              Priority: 1
+        VerificationMessageTemplate: 
+            DefaultEmailOption: CONFIRM_WITH_LINK
+        EmailVerificationSubject: 'Seu link de verificação projeto serverless'
+        EmailVerificationMessage: "Clique no link abaixo para verificar seu endereço de e-mail. {####}"
+    CognitoUserPoolClient:
+      Type: "AWS::Cognito::UserPoolClient"
+      Properties:
+        ClientName: ${self:custom.userPoolClientName}
+        GenerateSecret: False
+        UserPoolId:
+          Ref: CognitoUserPool
+        SupportedIdentityProviders:
+            - COGNITO
+        AllowedOAuthFlowsUserPoolClient: true
+        AllowedOAuthFlows: 
+            - code
+        AllowedOAuthScopes:
+            - email
+            - openid
+            - profile
+            - phone
+            - aws.cognito.signin.user.admin 
+        CallbackURLs: 
+            - https://test-dev-pool.com
+    CognitoUserPoolDomain: 
+      Type: AWS::Cognito::UserPoolDomain 
+      Properties:
+        Domain: "test-dev-pool"
+        UserPoolId: 
+          Ref: CognitoUserPool
+    DBinstanceRDSMysql:
+      Type: AWS::RDS::DBInstance
+      Properties:
+        DBInstanceIdentifier: BibliotecaServerless 
+        DBName: ${self:custom.DBNameRDS}
+        DBInstanceClass: db.t2.micro 
+        AllocatedStorage: 20
+        StorageType: gp2
+        Engine: MySQL
+        EngineVersion: 8.0.23
+        MasterUsername: ${self:custom.MasteruserRDS}
+        MasterUserPassword: ${self:custom.PassworduserRDS}
+        PubliclyAccessible: true
+        AvailabilityZone: us-east-1a
+        CACertificateIdentifier: rds-ca-2019
+        EnableCloudwatchLogsExports: 
+          - general
+        Tags:
+          - Key: "DBMysql"
+            Value: "Serverless"
+        LicenseModel: general-public-license
+        MaxAllocatedStorage: 30
+        UseDefaultProcessorFeatures: True
+
+  Outputs:
+    BucketName:
+      Description: Nome do Bucket
+      Value: ${self:custom.bucket}
+      Export: 
+        Name: BucketName               
+    UserPoolClientName:
+      Description: Nome do pool cognito
+      Value: ${self:custom.userPoolClientName}
+      Export:
+        Name: UserPoolClientName
+    UserPoolId:
+      Description: ID do pool cognito
+      Value:
+        Ref: CognitoUserPool
+    UserPoolClientId:
+      Description: ID do cliente de aplicativo
+      Value:
+        Ref: CognitoUserPoolClient
+    EndpointAddressDBRDS:
+      Description: Endereco do endpoint do RDS Mysql.
+      Value: !GetAtt 'DBinstanceRDSMysql.Endpoint.Address'
+      Export:
+        Name: !Join [ ':', [ !Ref 'AWS::StackName', 'EndpointAddress' ] ]   
+    EndpointPort:
+      Description: Porta do endpoint do RDS Mysql.
+      Value: !GetAtt 'DBinstanceRDSMysql.Endpoint.Port'
+      Export:
+        Name: !Join [ ':', [ !Ref 'AWS::StackName', 'EndpointPort' ] ]
+    ServiceEndpoint:
+      Export:
+        Name: API-Endpoint
+      
+            

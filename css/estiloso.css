@@ -1,0 +1,80 @@
+body{
+    padding-top: 60px;
+}
+
+.card{
+    box-shadow: 3px 6px 8px 3px rgba(100, 100, 100, 0.3);
+}
+form, .alert{
+    margin-top: 0;
+}
+input {
+    border-radius: 0;
+    padding: 5px;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+.showolho {
+    position: absolute;
+    top: 277px;
+    right: 30px;
+    cursor: pointer;
+}
+.showolho1 {
+    position: absolute;
+    top: 363px;
+    right: 30px;
+    cursor: pointer;
+}
+.showolhologin {
+    position: absolute;
+    top: 188px;
+    right: 32px;
+    cursor: pointer;
+}
+
+.bi.bi-eye{
+    font-size: 24px;
+    color: rgba(0, 0, 0, 0.2);
+}
+.bi.bi-eye-slash{
+    font-size: 24px;
+    color: rgba(0, 0, 0, 0.2);
+}
+
+.row{
+    margin: 0;
+}
+p, li{
+    color: #444;
+    font-size: 14px;
+}
+.container{
+    padding: 70px 0;
+}
+header, .navbar{
+    background-color: #353d41;
+}
+
+#nav-container{
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.navbar-brand{
+    padding: 0;
+    color: #fff;
+}
+.navbar-brand:hover{
+    color: #fff;
+}
+#navbar-links a{
+    color: #fff;
+    cursor: pointer;
+}
+
+.nav-expand-lg .navbar-nav .navbar-links{
+padding: 1rem .8rem;
+}
+

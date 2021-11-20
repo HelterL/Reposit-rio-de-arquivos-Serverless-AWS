@@ -1,0 +1,132 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../css/estiloso.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="container" id="nav-container">
+          <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-primary">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-links" aria-controls="navbar-links" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end container-fluid" id="navbar-links">
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link active" id="home-menu" href="../front-end/index.html"> Home</a>
+                    <a class="nav-item nav-link" id="sobre-menu" href="../front-end/sobre.html"> Sobre</a>
+                    <a class="nav-item nav-link" id="login-menu" href="../front-end/login.html"> Login</a>
+                    <a class="nav-item nav-link" id="cadastrar-menu" href="../front-end/register.html"> Cadastrar</a>
+                </div>
+            </div>
+          </nav>
+        </div>
+      </header>
+
+    <div class="container ">
+        <div class="row justify-content-center">
+            <div class="col-4  col-md-offset-2">
+                <div class="card">
+                    <div class="card-body">
+                        <h2 class="h3 mb-3 font-weight-normal" id="titleheader">Cadastro</h2>
+                        <form id="form-cadastro">
+                            <div class="form-group mb-3">
+                                <label for="personalnameRegister" class="form-label">Nome:</label>
+                                <input class="form-control" type="personalname" id="personalnameRegister"
+                                    placeholder="Digite seu Nome">
+                            </div>
+
+                            <div class="form-group mb-3">
+                                <label for="emailInputRegister" class="form-label">Email:</label>
+                                <input class="form-control" type="email" id="emailInputRegister"
+                                    placeholder="Digite seu e-mail">
+                            </div>
+
+                            <div class="form-group mb-3">
+                                <label for="passwordInputRegister" class="form-label">Senha:</label>
+                                <input class="form-control" type="password" id="passwordInputRegister"
+                                    placeholder="Digite sua senha">
+                                <span class="showolho">
+                                    <i class="bi1 bi bi-eye"></i>
+                                </span>
+                            </div>
+
+                            <div class="form-group mb-3">
+                                <label for="confirmationpassword" class="form-label">Confirme a senha:</label>
+                                <input class="form-control" type="password" id="confirmationpassword"
+                                    placeholder="Confirme sua senha">
+                                <span class="showolho1">
+                                    <i class="bi2 bi bi-eye"></i>
+                                </span>
+                            </div>
+
+                            <div class="form-group mb-3">
+                                <label for="phone" class="form-label">Fone:</label>
+                                <input class="form-control" type="tel" name="phone" id="phone"
+                                    placeholder="(85) 91234-5678">
+                            </div>
+                            
+                            <div class="form-group mb-3 text-center ">
+                                <button id="mainbutton" class="btn btn-primary col-12" type="button"
+                                    onclick="registerButton()">Cadastrar</button>
+                            </div>
+                            <div class="alert alert-danger d-none">
+                                <span id="campo-erro"></span>!
+                            </div>
+
+                            <div class="sucesso alert alert-info d-none">
+                                <span id="campo-sucesso"></span>!
+                            </div>
+
+                            <div class="divider py-0 bg-gray"><hr></div>
+                            <div class="form-group mb-3 text-center">
+                                <label>Já tem uma conta? <a href="./login.html" style="text-decoration: none;font-weight: bold;">Fazer login</a></label>
+                            </div>
+                            
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="../back-end/register_back.js"></script>
+    <script type="text/javascript" src="../back-end/apis.js"></script>
+    <script src="../js/amazon-cognito-auth.min.js"></script>
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.7.16.min.js"></script>
+    <script src="../js/amazon-cognito-identity.min.js"></script>
+    <script src="../back-end/configcognito.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/mostrarocultasenhacadastro.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
+    <script type="text/javascript">$("#phone").mask("(00) 00000-0009");</script>
+
+    <blockquote class="blockquote text-center">
+        <footer class="blockquote-footer">
+          <div class="content">
+            <p>
+              Exemplo de <i>site</i> criado no paradigma <i>Serverless</i> por Helter Pitanga.
+            </p>
+          </div>
+        </footer>
+      </blockquote>
+</body>
+
+</html>
