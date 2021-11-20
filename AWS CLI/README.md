@@ -32,13 +32,13 @@ No painel de navegação, escolha *Usuários* e depois *Adicionar usuário*.
 Siga os seguintes passos abaixo:
 
 1. Criar nome do seu usuário e selecionar a caixa *Acesso Programático.*
-![img](./IMG/add_iam.png)
+![img]{width=250px}(./IMG/add_iam.png)
 
 2. Criar um grupo e adicionar o usuário criado no grupo e atribuir políticas de acesso.
 ![img](./IMG/create_group_iam.png)
 
 Digite o nome do seu grupo e selecione a permissão *AdministratorAccess* para ter acessos aos recursos e serviços através da AWS-CLI. 
-![img](./IMG/create_group_iam2.png
+![img](./IMG/create_group_iam2.png)
 
 Selecione o grupo que criou.
 ![img](./IMG/create_group_iam3.png)
