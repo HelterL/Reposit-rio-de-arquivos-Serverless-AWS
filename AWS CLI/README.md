@@ -37,7 +37,7 @@ Siga os seguintes passos abaixo:
 2. Criar um grupo e adicionar o usuário criado no grupo e atribuir políticas de acesso.
 ![img](./IMG/create_group_iam.png)
 
-- Digite o nome do seu grupo e selecione a permissão *AdministratorAccess* para ter acessos aos recursos e serviços através da AWS-CLI. 
+- Digite o nome do seu grupo e selecione a permissão *AdministratorAccess* para ter acessos aos recursos e serviços através da AWS CLI. 
 ![img](./IMG/create_group_iam2.png)
 
 - Selecione o grupo que criou.
@@ -52,7 +52,18 @@ Siga os seguintes passos abaixo:
 ## Entrar com as credenciais do usuário IAM através do comando:
 `aws configure`<br>
 No campo *Default region name* vamos utilizar a região **us-east-1** Leste dos EUA (Norte da Virgínia)
-![img](./IMG/aws_configure.png)
+
+```
+aws configure
+AWS Access Key ID [****************TDA2]:
+AWS Secret Access Key [****************j+rY]:
+Default region name [us-east-1]:
+Default output format [None]:
+```
+Para verificar se o `aws configure`foi configurado com sucesso execute o seguinte comando: <br>
+`aws ec2 describe-vpcs` <br>
+Se retornar as informações das vcps da aws significa que está configurado, caso contrário as informações colocadas estão erradas, repita o procedimento executando o comando `aws configure` novamente.
+
 
 
 
