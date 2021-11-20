@@ -6,8 +6,8 @@ O aplicativo mostra como criar um projeto sem servidor com Amazon cognito, Amazo
 
 **Pré-requisitos:**
 
-1. Instalação e configuração da [AWS Command Line Interface] (Caminho do readme AWS)
-2. Instalação da linguagem da NodeJS e do framework *Serverless* [Nodejs&Serverless](Caminho AWS)
+1. Instalação e configuração da [AWS Command Line Interface] (https://github.com/HelterL/Reposit-rio-de-arquivos-Serverless-AWS/tree/master/AWS%20CLI)
+2. Instalação da linguagem da NodeJS e do framework *Serverless* [Nodejs&Serverless](https://github.com/HelterL/Reposit-rio-de-arquivos-Serverless-AWS/tree/master/Nodejs/README.md)
 
 
 
