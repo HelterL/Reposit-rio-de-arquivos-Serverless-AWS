@@ -31,31 +31,28 @@ No painel de navegação, escolha *Usuários* e depois *Adicionar usuário*.<br>
 
 Siga os seguintes passos abaixo:<br>
 
-**1 passo:**
+1. Criar nome do seu usuário e selecionar a caixa *Acesso Programático.*
+![img](./IMG/add_iam.png) <br>
 
-Criar nome do seu usuário e selecionar a caixa *Acesso Programático.*
-![img](caminho...) <br>
-
-**2 passo:**
-Criar um grupo e adicionar o usuário criado no grupo e atribuir políticas de acesso.
-![img](caminho...)<br>
+2. Criar um grupo e adicionar o usuário criado no grupo e atribuir políticas de acesso.
+![img](./IMG/create_group_iam.png)<br>
 
 Digite o nome do seu grupo e selecione a permissão *AdministratorAccess* para ter acessos aos recursos e serviços através da AWS-CLI. <br>
-![img](caminho...)<br>
+![img](./IMG/create_group_iam2.png)<br>
 
 Selecione o grupo que criou.
-![img](caminho...)
+![img](./IMG/create_group_iam3.png)
 
-**3 passo:**
-Revise as escolhas para ter certeza que não esqueceu nada e clique em *Criar Usuário*.
-![img](caminho...)
-Faça download da suas crendenciais, esta é a única oportunidade de visualizar ou fazer download das chaves de acesso secretas.
-![img](caminho...)
+3. Revise as escolhas para ter certeza que não esqueceu nada e clique em *Criar Usuário*.
+![img](./IMG/create_user_iam.png)
+
+4. Faça download da suas crendenciais, esta é a única oportunidade de visualizar ou fazer download das chaves de acesso secretas.
+![img](./IMG/iam_keys_acess.png)
 
 ## Entrar com as credenciais do usuário IAM através do comando:
 `aws configure`<br>
 No campo *Default region name* vamos utilizar a região **us-east-1** Leste dos EUA (Norte da Virgínia)
-![img](https://github.com/AnttoniC/TCC/blob/master/Ferramenta/MINP_Aws/ClusterAws/Aws-CLI/IMG/awsConfigure.png)
+![img](./IMG/aws_configure.png)
 
 
 
