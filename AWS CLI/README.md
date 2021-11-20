@@ -27,18 +27,18 @@ aws-cli/1.19.110 Python/3.6.0 Windows/10 botocore/1.20.110
 
 ## Criar um usuário no IAM(Identity and Access Management) no console AWS.
 
-No painel de navegação, escolha *Usuários* e depois *Adicionar usuário*.<br>
+No painel de navegação, escolha *Usuários* e depois *Adicionar usuário*.
 
-Siga os seguintes passos abaixo:<br>
+Siga os seguintes passos abaixo:
 
 1. Criar nome do seu usuário e selecionar a caixa *Acesso Programático.*
-![img](./IMG/add_iam.png) <br>
+![img](./IMG/add_iam.png)
 
 2. Criar um grupo e adicionar o usuário criado no grupo e atribuir políticas de acesso.
-![img](./IMG/create_group_iam.png)<br>
+![img](./IMG/create_group_iam.png)
 
-Digite o nome do seu grupo e selecione a permissão *AdministratorAccess* para ter acessos aos recursos e serviços através da AWS-CLI. <br>
-![img](./IMG/create_group_iam2.png)<br>
+Digite o nome do seu grupo e selecione a permissão *AdministratorAccess* para ter acessos aos recursos e serviços através da AWS-CLI. 
+![img](./IMG/create_group_iam2.png
 
 Selecione o grupo que criou.
 ![img](./IMG/create_group_iam3.png)
