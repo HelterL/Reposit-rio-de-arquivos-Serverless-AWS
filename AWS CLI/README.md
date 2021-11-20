@@ -49,8 +49,8 @@ Siga os seguintes passos abaixo:
 4. Faça download da suas crendenciais, esta é a única oportunidade de visualizar ou fazer download das chaves de acesso secretas.
 ![img](./IMG/iam_keys_acess.png)
 
-## Entrar com as credenciais do usuário IAM através do comando:
-Utilizando o prompt de comando, utilize o comando a seguir para configurar as credenciaciais no AWS CLI.
+## Entrar com as credenciais do usuário IAM no AWS CLI:
+Utilizando o prompt de comando, utilize o comando a seguir para configurar as credenciaciais no AWS CLI.<br>
 `aws configure`<br>
 No campo *Default region name* vamos utilizar a região **us-east-1** Leste dos EUA (Norte da Virgínia).
 
