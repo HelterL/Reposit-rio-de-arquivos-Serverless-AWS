@@ -1,6 +1,6 @@
 # Repositório de arquivos PDFs Serverless com AWS
 Este é um aplicativo que demonstra como utilizar as tecnologias da AWS para construir uma aplicação de **repositório de arquivos PDFS sem servidor**.
-O aplicativo mostra como criar um projeto sem servidor com Amazon cognito, Amazon Lambda, Amazon RDS e Amazon S3.
+O aplicativo mostra como criar um projeto sem servidor com Amazon cognito,Amazon SNS, Amazon Lambda, Amazon RDS e Amazon S3.
 
 ## Tabela de conteúdos
 
@@ -33,12 +33,37 @@ O aplicativo mostra como criar um projeto sem servidor com Amazon cognito, Amazo
 
 **Pré-requisitos:**
 
-1. Instalação e configuração da [AWS Command Line Interface](https://github.com/HelterL/Reposit-rio-de-arquivos-Serverless-AWS/tree/master/AWS%20CLI)
-2. Instalação da linguagem NodeJS e do framework *Serverless* [Nodejs&Serverless](https://github.com/HelterL/Reposit-rio-de-arquivos-Serverless-AWS/tree/master/Nodejs/README.md)
-3. Banco de dados Mysql Workbench[Mysql Workbench](https://dev.mysql.com/downloads/workbench/)
+- Instalação e configuração da [AWS Command Line Interface](https://github.com/HelterL/Reposit-rio-de-arquivos-Serverless-AWS/tree/master/AWS%20CLI)
+- Instalação da linguagem NodeJS e do framework *Serverless* [Nodejs&Serverless](https://github.com/HelterL/Reposit-rio-de-arquivos-Serverless-AWS/tree/master/Nodejs/README.md)
+- Instalação do banco de dados Mysql Workbench [Mysql Workbench](https://dev.mysql.com/downloads/workbench/)
 
+1. Clone o repositório do github.
 
+```
+git clone https://github.com/HelterL/Reposit-rio-de-arquivos-Serverless-AWS.git
 
+```
+
+2. Execute o comando abaixo e digite os dados que se perdem, para o nome do bucket, nome do banco de dados, usuário e senha para o banco de dados.
+```
+node script.js
+
+```
+
+Exemplo de preenchimento.
+
+```
+
+Qual o nome do bucket?
+exemplobucketname
+Qual nome do banco de dados?
+serverlessexemploaplicacao
+Qual o nome do usuário para o banco de dados?
+teste321
+Qual a senha para o banco de dados?
+1234teste321
+
+```
 
 
 
