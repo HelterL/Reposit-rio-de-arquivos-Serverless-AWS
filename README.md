@@ -6,8 +6,8 @@ O aplicativo mostra como criar um projeto sem servidor com Amazon cognito, Amazo
 
 * [Recursos](#recursos)
 * [Apresentação serviços AWS](#apresentação-serviços-aws)
+* [Arquitetura](#arquitetura)
 * [Instalação](#instalação)
-
 
 ## Recursos
 - Registrar usuário
@@ -25,6 +25,9 @@ O aplicativo mostra como criar um projeto sem servidor com Amazon cognito, Amazo
 - Envio de SMS com [Amazon SNS](https://aws.amazon.com/pt/sns/)
 - Armazenamento de arquivos com [Amazon S3](https://aws.amazon.com/pt/s3/)
 - Armazenamento de metadados com [Amazon RDS](https://aws.amazon.com/pt/rds/)
+
+## Arquitetura
+![img](./IMG/TCC2_arquitetura-1.png)
 
 ## Instalação
 
