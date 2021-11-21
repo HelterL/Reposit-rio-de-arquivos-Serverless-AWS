@@ -89,6 +89,34 @@ serverless deploy
 
 - **Obs** Deve demorar mais ou menos entre 15 a 20 minutos, pois a criação do banco de dados é bem demorada. Então é o tempo de ir tomar café😍
 
+6. Após a finalização do deploy, entre na pasta **back-end/apis.js**, e coloque as informação do nome do bucket e das APIS.<br>
+O endpoint das APIs se encontram no prompt de comando, na finalização do deploy, cole-os para o arquivo e salve.
+
+```
+    var BUCKET_NAME =  "Nome do bucket";
+    var API_MYSQL = "cole a api api_mysql";
+    var API_LIST = "cole a api_list";
+
+``` 
+
+Dentro do arquivo **back-end/register_sms.js** adicione o endpoint da API SMS dentro do arquivo na seguinte variável e salve:
+
+```
+ var API_SMS = "API SMS";
+
+```
+7. Dentro do arquivo **back-end/configcognito.js**, adicione o **UserPoolId** e o **ClientId** que foram gerados após o deploy da aplicação.<br>
+Essas informações podem ser encontradas no arquivo **outputs.toml** nas linhas 2 e 5, mas cuidado para não se confundir e após isso salve, Exemplo :
+
+```
+window._config = {
+    cognito: {
+        userPoolId: "us-east-1_AlJsadjASHF", // UserPoolId
+        region: 'us-east-1', // Região
+		clientId: "39c2ajfohe29b7q12s79057/ASsc9"
+    },
+};
+```
 
 
 

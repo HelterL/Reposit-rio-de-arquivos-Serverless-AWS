@@ -4,7 +4,7 @@ function enviarSMS(){
    phone = document.getElementById("phone").value;
    var clearphone = phone.replace(/\D/gim, '');
    personalname = document.getElementById("personalnameRegister").value;
-   var API_SMS = "https://2ckhjqhbxg.execute-api.us-east-1.amazonaws.com/dev/enviarsms";
+   var API_SMS = "API SMS";
    url = `${API_SMS}?phone=+55${clearphone}&personalname=${personalname}`;
    let xhr = new XMLHttpRequest();
 
