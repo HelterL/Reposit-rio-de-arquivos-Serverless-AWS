@@ -80,5 +80,15 @@ node gerador-arquivoupload.js
 
 ```
 
+5. Deploy da aplicação com o framework *serverless*, execute o comando abaixo.
+
+```
+serverless deploy
+
+```
+
+- **Obs** Deve demorar mais ou menos entre 15 a 20 minutos, pois a criação do banco de dados é bem demorada. Então é o tempo de ir tomar café😍
+
+
 
 
