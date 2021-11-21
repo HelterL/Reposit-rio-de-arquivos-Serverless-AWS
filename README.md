@@ -1,6 +1,6 @@
 # Repositório de arquivos PDFs Serverless com AWS
 Este é um aplicativo que demonstra como utilizar as tecnologias da AWS para construir uma aplicação de **repositório de arquivos PDFS sem servidor**.
-O aplicativo mostra como criar um projeto sem servidor com Amazon cognito,Amazon SNS, Amazon Lambda, Amazon RDS e Amazon S3.
+O aplicativo mostra como criar um projeto sem servidor com Amazon cognito, Amazon SNS, Amazon Lambda, Amazon RDS e Amazon S3.
 
 ## Tabela de conteúdos
 
@@ -50,7 +50,7 @@ node script.js
 
 ```
 
-Exemplo de preenchimento.
+Exemplo de preenchimento, utilize apenas letras minúsculas e/ou números.
 
 ```
 
@@ -65,6 +65,20 @@ Qual a senha para o banco de dados?
 
 ```
 
+3. Dentro do arquivo **gerador-arquivoupload.js**, na linha abaixo altere para o nome que foi dado ao bucket na execução do script.
+
+```
+ const bucketName = 'Nome do seu bucket';
+
+```
+
+4. Depois execute o seguinte comando abaixo.
+
+```
+
+node gerador-arquivoupload.js
+
+```
 
 
 
