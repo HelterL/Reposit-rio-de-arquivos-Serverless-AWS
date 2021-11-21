@@ -89,8 +89,8 @@ serverless deploy
 
 - **Obs** Deve demorar mais ou menos entre 15 a 20 minutos, pois a criação do banco de dados é bem demorada. Então é o tempo de ir tomar café😍
 
-6. Após a finalização do deploy, entre na pasta **back-end/apis.js**, e coloque as informação do nome do bucket e das APIS.<br>
-O endpoint das APIs se encontram no prompt de comando, na finalização do deploy, cole-os para o arquivo e salve.
+6. Após a finalização do deploy, entre na pasta **back-end/apis.js**, e coloque as informações do nome do bucket e das APIS.
+Os endpoints das APIs se encontram no prompt de comando, na finalização do deploy, cole-os para o arquivo e salve.
 
 ```
     var BUCKET_NAME =  "Nome do bucket";
@@ -102,7 +102,7 @@ O endpoint das APIs se encontram no prompt de comando, na finalização do deplo
 Dentro do arquivo **back-end/register_sms.js** adicione o endpoint da API SMS dentro do arquivo na seguinte variável e salve:
 
 ```
- var API_SMS = "API SMS";
+ var API_SMS = "cole a API SMS";
 
 ```
 7. Dentro do arquivo **back-end/configcognito.js**, adicione o **UserPoolId** e o **ClientId** que foram gerados após o deploy da aplicação.<br>
@@ -116,7 +116,19 @@ window._config = {
 		clientId: "39c2ajfohe29b7q12s79057/ASsc9"
     },
 };
+
 ```
+
+8. Configuração do banco de dados, entre no aplicativo do mysql Worbench e coloque os seguintes dados para acessar o banco de dados.<br>
+Dê um nome para a conexão, dentro do campo **Connection Name**, dentro do arquivo **outputs.toml** encontre a seguinte linha com a variável **EndpointAddressDBRDS** e cole o resultado dentro da opção **Host** do Mysql Workbench. 
+Coloque o nome do usuário que foi dado na execução do script e clique na opção *Store in Vault* e digite a senha que foi dada no inicio, Segue exemplo.
+
+![img](./IMG/workbench_autenticacao.png)
+
+Após isso, clique em **Teste connection** para verificar se a conexão com o banco de dados foi um sucesso, caso contrário verifique se as informações foram adicionadas de forma corretas.
+
+![img](./IMG/workbench_autenticacao2.png)
+
 
 
 
