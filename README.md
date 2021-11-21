@@ -5,6 +5,8 @@ O aplicativo mostra como criar um projeto sem servidor com Amazon cognito, Amazo
 ## Tabela de conteúdos
 
 * [Recursos](#recursos)
+* [Apresentação serviços AWS](#apresentação-serviços-aws)
+* [Instalação](#instalação)
 
 
 ## Recursos
@@ -14,6 +16,15 @@ O aplicativo mostra como criar um projeto sem servidor com Amazon cognito, Amazo
 - Upload de arquivo bucket S3
 - Envio de dados do S3 para o RDS
 - Download de arquivo do bucket
+
+## Apresentação serviços AWS
+
+- Funções sem servidor com [AWS Lambda](https://aws.amazon.com/pt/lambda/)
+- Acesso e controle das API com [AWS API Gateway](https://aws.amazon.com/pt/api-gateway/)
+- Autenticação com [Amazon Cognito](https://aws.amazon.com/pt/cognito/) e grupo de usuários [Pool usuários Cognito](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-identity-pools.html)
+- Envio de SMS com [Amazon SNS](https://aws.amazon.com/pt/sns/)
+- Armazenamento de arquivos com [Amazon S3](https://aws.amazon.com/pt/s3/)
+- Armazenamento de metadados com [Amazon RDS](https://aws.amazon.com/pt/rds/)
 
 ## Instalação
 
