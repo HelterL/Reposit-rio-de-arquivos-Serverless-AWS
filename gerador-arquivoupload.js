@@ -6,7 +6,7 @@ const AWS = require("aws-sdk");
 
 const awsAccessKeyId = AWS.config.credentials.accessKeyId;
 const awsSecretAccessKey = AWS.config.credentials.secretAccessKey;
-const bucketName = 'teste321hhelter';
+const bucketName = 'Nome do seu bucket';
 
 const msPerDay = 744 * 60 * 60 * 1000;
 const expiration = new Date(Date.now() + msPerDay).toISOString();
