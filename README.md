@@ -121,7 +121,7 @@ window._config = {
 
 8. Configuração do banco de dados, entre no aplicativo do mysql Worbench e coloque os seguintes dados para acessar o banco de dados.<br>
 Dê um nome para a conexão, dentro do campo **Connection Name**, dentro do arquivo **outputs.toml** encontre a seguinte linha com a variável **EndpointAddressDBRDS** e cole o resultado dentro da opção **Host** do Mysql Workbench. 
-Coloque o nome do usuário que foi dado na execução do script e clique na opção *Store in Vault* e digite a senha que foi dada no inicio, Segue exemplo.
+Coloque o nome do usuário que foi dado na execução do script, e clique na opção *Store in Vault* para adicionar a senha que foi dado no inicio, segue exemplo.
 
 ![img](./IMG/workbench_autenticacao.png)
 
@@ -129,6 +129,33 @@ Após isso, clique em **Teste connection** para verificar se a conexão com o ba
 
 ![img](./IMG/workbench_autenticacao2.png)
 
+9. Após a conexão ser um sucesso, clique em **close** e duplo clique na caixa que foi criada com o nome da conexão que foi criada.<br>
+Dentro do banco de dados execute os comandos a seguir, altere o **nome-do-banco-de-dados** para o nome do banco que foi dado no inicio;
 
+```
 
+use nome-do-banco-de-dados;
 
+create table livro(
+id int not null auto_increment,
+Titulo varchar(150),
+Author varchar(150),
+Numpages varchar(10),
+primary key (id)
+);
+
+```
+
+Após isso clique no raio na parte superior, segue exemplo.
+![img](./IMG/workbench_sql.png)
+
+10. Entre na dashboard da AWS e vá no serviço S3, entre no bucket com o nome que foi dado e entre na opção **Permissões** role a página para baixo e encontre a seguinte opção **Lista de controle de acesso (ACL)** clique em editar acione as opções Listar e Gravação para todos os usuários.
+Lembrando, isso não é recomendado mas aqui é apenas para uso de demonstração. Segue exemplo.
+![img](./IMG/permission_s3.png)
+
+11. Finalização da stack e remoção de todos os recursos criados. Execute o seguinte comando.<br>
+
+```
+serverless remove
+
+```
