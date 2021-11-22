@@ -163,7 +163,7 @@ serverless remove
 
 ```
 
-## Visão Geral da aplicação
+## Visão geral da aplicação
 
 1. Página de cadastro ``` register.html ```<br>
 Cadastre um usuário usando o pool de usuários do Amazon Cognito.
