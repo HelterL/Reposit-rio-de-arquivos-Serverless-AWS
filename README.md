@@ -9,7 +9,7 @@ O aplicativo mostra como criar um projeto sem servidor com Amazon cognito, Amazo
 * [Arquitetura](#bookmark_tabs-arquitetura)
 * [Instalação](#computer-instalação)
 * [Visão Geral da aplicação](#mag_right-visão-geral-da-aplicação)
-* [Melhorias futuras](#mag_right-melhorias-futuras)
+* [Melhorias futuras](#high_brightness-melhorias-futuras)
 
 ## :sparkles: Recursos
 - Registrar usuário
