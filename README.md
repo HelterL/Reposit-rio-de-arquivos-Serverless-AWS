@@ -2,7 +2,7 @@
 Este é um aplicativo que demonstra como utilizar as tecnologias da AWS para construir uma aplicação de **repositório de arquivos PDFS sem servidor**.
 O aplicativo mostra como criar um projeto sem servidor com Amazon cognito, Amazon SNS, Amazon Lambda, Amazon RDS e Amazon S3.
 
-## Tabela de conteúdos
+## :card_index: Tabela de conteúdos
 
 * [Recursos](#recursos)
 * [Apresentação serviços AWS](#apresentação-serviços-aws)
@@ -10,7 +10,7 @@ O aplicativo mostra como criar um projeto sem servidor com Amazon cognito, Amazo
 * [Instalação](#instalação)
 * [Visão Geral da aplicação](#visão-geral-da-aplicação)
 
-## Recursos
+## :rocket: Recursos
 - Registrar usuário
 - Login / Logout
 - Envio SMS para o usuário
@@ -18,7 +18,7 @@ O aplicativo mostra como criar um projeto sem servidor com Amazon cognito, Amazo
 - Envio de dados do S3 para o RDS
 - Download de arquivo do bucket
 
-## Apresentação serviços AWS
+## :sparkles: Apresentação serviços AWS
 
 - Funções sem servidor com [AWS Lambda](https://aws.amazon.com/pt/lambda/)
 - Acesso e controle das API com [AWS API Gateway](https://aws.amazon.com/pt/api-gateway/)
@@ -27,10 +27,10 @@ O aplicativo mostra como criar um projeto sem servidor com Amazon cognito, Amazo
 - Armazenamento de arquivos com [Amazon S3](https://aws.amazon.com/pt/s3/)
 - Armazenamento de metadados com [Amazon RDS](https://aws.amazon.com/pt/rds/)
 
-## Arquitetura
+## :bookmark_tabs: Arquitetura
 ![img](./IMG/TCC2_arquitetura-1.png)
 
-## Instalação
+## :computer: Instalação
 
 **Pré-requisitos:**
 
@@ -163,7 +163,7 @@ serverless remove
 
 ```
 
-## Visão geral da aplicação
+## :mag_right: Visão geral da aplicação
 
 1. Página de cadastro ``` register.html ```<br>
 Cadastre um usuário usando o pool de usuários do Amazon Cognito.
@@ -176,4 +176,8 @@ Faça login utilizando o pool de usuários do Amazon Cognito.
 3. Página de recuperação de senha ```recoverpassword.html ``` <br>
 ![img](./IMG/recuperacao_senha.png)
 
+4. Página principal ``` profile.html ``` <br>
+Faça upload de artigos PDFs para o bucket S3 e armazene os metadados no banco de dados RDS e faça o download dos arquivos posteriormente
+![img](./IMG/tela_principal.png)
 
+## Melhorias futuras

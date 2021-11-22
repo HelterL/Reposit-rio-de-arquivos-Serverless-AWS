@@ -6,20 +6,20 @@
     },
     "provider": {
       "environment": {
-        "Bucket": "teste321hhelter",
-        "DatabaseName": "BibliotecaServerless",
-        "DatabaseUser": "lucio_helter",
-        "DatabasePassword": "14302134",
+        "Bucket": "exemplobucketname",
+        "DatabaseName": "serverlessexemploaplicacao",
+        "DatabaseUser": "teste321",
+        "DatabasePassword": "1234teste321",
         "RDSEndpoint": {
           "Fn::GetAtt": [
             "DBinstanceRDSMysql",
             "Endpoint.Address"
           ]
         },
-        "BUCKET_NAME": "teste321hhelter",
-        "DB_NAME": "BibliotecaServerless",
-        "USER_NAME_DB": "lucio_helter",
-        "USER_PASSWORD_DB": "14302134"
+        "BUCKET_NAME": "exemplobucketname",
+        "DB_NAME": "serverlessexemploaplicacao",
+        "USER_NAME_DB": "teste321",
+        "USER_PASSWORD_DB": "1234teste321"
       },
       "name": "aws",
       "endpointType": "REGIONAL",
@@ -37,7 +37,7 @@
             "s3:ListBucket",
             "s3:ListObject"
           ],
-          "Resource": "arn:aws:s3:::teste321hhelter/*"
+          "Resource": "arn:aws:s3:::exemplobucketname/*"
         },
         {
           "Effect": "Allow",
@@ -236,7 +236,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/bibliotecaserverless/dev/1637262885231-2021-11-18T19:14:45.231Z/bibliotecaserverless.zip"
+                "S3Key": "serverless/bibliotecaserverless/dev/1637619787173-2021-11-22T22:23:07.173Z/bibliotecaserverless.zip"
               },
               "Handler": "handler.objetocriado",
               "Runtime": "nodejs14.x",
@@ -245,17 +245,17 @@
               "Timeout": 6,
               "Environment": {
                 "Variables": {
-                  "Bucket": "teste321hhelter",
-                  "DatabaseName": "BibliotecaServerless",
-                  "DatabaseUser": "lucio_helter",
-                  "DatabasePassword": "14302134",
+                  "Bucket": "exemplobucketname",
+                  "DatabaseName": "serverlessexemploaplicacao",
+                  "DatabaseUser": "teste321",
+                  "DatabasePassword": "1234teste321",
                   "RDSEndpoint": {
                     "$ref": "$[\"service\"][\"provider\"][\"environment\"][\"RDSEndpoint\"]"
                   },
-                  "BUCKET_NAME": "teste321hhelter",
-                  "DB_NAME": "BibliotecaServerless",
-                  "USER_NAME_DB": "lucio_helter",
-                  "USER_PASSWORD_DB": "14302134"
+                  "BUCKET_NAME": "exemplobucketname",
+                  "DB_NAME": "serverlessexemploaplicacao",
+                  "USER_NAME_DB": "teste321",
+                  "USER_PASSWORD_DB": "1234teste321"
                 }
               },
               "Role": {
@@ -276,7 +276,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/bibliotecaserverless/dev/1637262885231-2021-11-18T19:14:45.231Z/bibliotecaserverless.zip"
+                "S3Key": "serverless/bibliotecaserverless/dev/1637619787173-2021-11-22T22:23:07.173Z/bibliotecaserverless.zip"
               },
               "Handler": "handler.consultardb",
               "Runtime": "nodejs14.x",
@@ -285,17 +285,17 @@
               "Timeout": 6,
               "Environment": {
                 "Variables": {
-                  "Bucket": "teste321hhelter",
-                  "DatabaseName": "BibliotecaServerless",
-                  "DatabaseUser": "lucio_helter",
-                  "DatabasePassword": "14302134",
+                  "Bucket": "exemplobucketname",
+                  "DatabaseName": "serverlessexemploaplicacao",
+                  "DatabaseUser": "teste321",
+                  "DatabasePassword": "1234teste321",
                   "RDSEndpoint": {
                     "$ref": "$[\"service\"][\"provider\"][\"environment\"][\"RDSEndpoint\"]"
                   },
-                  "BUCKET_NAME": "teste321hhelter",
-                  "DB_NAME": "BibliotecaServerless",
-                  "USER_NAME_DB": "lucio_helter",
-                  "USER_PASSWORD_DB": "14302134"
+                  "BUCKET_NAME": "exemplobucketname",
+                  "DB_NAME": "serverlessexemploaplicacao",
+                  "USER_NAME_DB": "teste321",
+                  "USER_PASSWORD_DB": "1234teste321"
                 }
               },
               "Role": {
@@ -316,7 +316,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/bibliotecaserverless/dev/1637262885231-2021-11-18T19:14:45.231Z/bibliotecaserverless.zip"
+                "S3Key": "serverless/bibliotecaserverless/dev/1637619787173-2021-11-22T22:23:07.173Z/bibliotecaserverless.zip"
               },
               "Handler": "handler.listar",
               "Runtime": "nodejs14.x",
@@ -325,17 +325,17 @@
               "Timeout": 6,
               "Environment": {
                 "Variables": {
-                  "Bucket": "teste321hhelter",
-                  "DatabaseName": "BibliotecaServerless",
-                  "DatabaseUser": "lucio_helter",
-                  "DatabasePassword": "14302134",
+                  "Bucket": "exemplobucketname",
+                  "DatabaseName": "serverlessexemploaplicacao",
+                  "DatabaseUser": "teste321",
+                  "DatabasePassword": "1234teste321",
                   "RDSEndpoint": {
                     "$ref": "$[\"service\"][\"provider\"][\"environment\"][\"RDSEndpoint\"]"
                   },
-                  "BUCKET_NAME": "teste321hhelter",
-                  "DB_NAME": "BibliotecaServerless",
-                  "USER_NAME_DB": "lucio_helter",
-                  "USER_PASSWORD_DB": "14302134"
+                  "BUCKET_NAME": "exemplobucketname",
+                  "DB_NAME": "serverlessexemploaplicacao",
+                  "USER_NAME_DB": "teste321",
+                  "USER_PASSWORD_DB": "1234teste321"
                 }
               },
               "Role": {
@@ -356,7 +356,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/bibliotecaserverless/dev/1637262885231-2021-11-18T19:14:45.231Z/bibliotecaserverless.zip"
+                "S3Key": "serverless/bibliotecaserverless/dev/1637619787173-2021-11-22T22:23:07.173Z/bibliotecaserverless.zip"
               },
               "Handler": "handler.enviarsms",
               "Runtime": "nodejs14.x",
@@ -365,17 +365,17 @@
               "Timeout": 6,
               "Environment": {
                 "Variables": {
-                  "Bucket": "teste321hhelter",
-                  "DatabaseName": "BibliotecaServerless",
-                  "DatabaseUser": "lucio_helter",
-                  "DatabasePassword": "14302134",
+                  "Bucket": "exemplobucketname",
+                  "DatabaseName": "serverlessexemploaplicacao",
+                  "DatabaseUser": "teste321",
+                  "DatabasePassword": "1234teste321",
                   "RDSEndpoint": {
                     "$ref": "$[\"service\"][\"provider\"][\"environment\"][\"RDSEndpoint\"]"
                   },
-                  "BUCKET_NAME": "teste321hhelter",
-                  "DB_NAME": "BibliotecaServerless",
-                  "USER_NAME_DB": "lucio_helter",
-                  "USER_PASSWORD_DB": "14302134"
+                  "BUCKET_NAME": "exemplobucketname",
+                  "DB_NAME": "serverlessexemploaplicacao",
+                  "USER_NAME_DB": "teste321",
+                  "USER_PASSWORD_DB": "1234teste321"
                 }
               },
               "Role": {
@@ -389,50 +389,50 @@
               "EnviarsmsLogGroup"
             ]
           },
-          "ObjetocriadoLambdaVersionu8GzABza3BEQs9N93vBmSnk2XxT0yLPlPJt1a6gOzk": {
+          "ObjetocriadoLambdaVersionH1eoouauZB4PfJceFIAW4EccQw4ZSFHSYuflItLHI": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "ObjetocriadoLambdaFunction"
               },
-              "CodeSha256": "diKnwL7FJUyxmOdgMXRUoCncXIe1UrR0fZ0veDsugQo="
+              "CodeSha256": "O/aSxQ8dOG/mGT5NPfSlSPSPlwMqpDj0M+FP1fn5DQo="
             }
           },
-          "ConsultardbLambdaVersion1OP7rXyg90TmEdnMqF5zTASdwIEexomj0wfOZDH2wM": {
+          "ConsultardbLambdaVersionIQ5Ceo0cbJozDiJrTRzApSe4t9jQAv3o5Dyfq7swA8": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "ConsultardbLambdaFunction"
               },
-              "CodeSha256": "diKnwL7FJUyxmOdgMXRUoCncXIe1UrR0fZ0veDsugQo="
+              "CodeSha256": "O/aSxQ8dOG/mGT5NPfSlSPSPlwMqpDj0M+FP1fn5DQo="
             }
           },
-          "ListarLambdaVersionnX93hGybhO6ThITfmbJwmnvqNdDdy6HC2TGA5dcltys": {
+          "ListarLambdaVersionrINNOByBnUTIHGSTlL1RRLF2zlyGMkyedy7YVkn00I": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "ListarLambdaFunction"
               },
-              "CodeSha256": "diKnwL7FJUyxmOdgMXRUoCncXIe1UrR0fZ0veDsugQo="
+              "CodeSha256": "O/aSxQ8dOG/mGT5NPfSlSPSPlwMqpDj0M+FP1fn5DQo="
             }
           },
-          "EnviarsmsLambdaVersionuvv7hIw0gbO9fVa7iOFSo0xWHZYkwNU63rZ7JQIw8A": {
+          "EnviarsmsLambdaVersion20tL2IHtMuqvBXQZiThcIA9Hcl0T69VdqTDjZLgV7ns": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "EnviarsmsLambdaFunction"
               },
-              "CodeSha256": "diKnwL7FJUyxmOdgMXRUoCncXIe1UrR0fZ0veDsugQo="
+              "CodeSha256": "O/aSxQ8dOG/mGT5NPfSlSPSPlwMqpDj0M+FP1fn5DQo="
             }
           },
-          "S3BucketTeste321hhelter": {
+          "S3BucketExemplobucketname": {
             "Type": "AWS::S3::Bucket",
             "Properties": {
-              "BucketName": "teste321hhelter",
+              "BucketName": "exemplobucketname",
               "NotificationConfiguration": {
                 "LambdaConfigurations": [
                   {
@@ -462,10 +462,10 @@
               }
             },
             "DependsOn": [
-              "ObjetocriadoLambdaPermissionTeste321hhelterS3"
+              "ObjetocriadoLambdaPermissionExemplobucketnameS3"
             ]
           },
-          "ObjetocriadoLambdaPermissionTeste321hhelterS3": {
+          "ObjetocriadoLambdaPermissionExemplobucketnameS3": {
             "Type": "AWS::Lambda::Permission",
             "Properties": {
               "FunctionName": {
@@ -484,7 +484,7 @@
                     {
                       "Ref": "AWS::Partition"
                     },
-                    ":s3:::teste321hhelter"
+                    ":s3:::exemplobucketname"
                   ]
                 ]
               },
@@ -505,7 +505,7 @@
               "Policy": ""
             }
           },
-          "ApiGatewayResourceReaddb": {
+          "ApiGatewayResourceApimysql": {
             "Type": "AWS::ApiGateway::Resource",
             "Properties": {
               "ParentId": {
@@ -514,13 +514,13 @@
                   "RootResourceId"
                 ]
               },
-              "PathPart": "readdb",
+              "PathPart": "api_mysql",
               "RestApiId": {
                 "Ref": "ApiGatewayRestApi"
               }
             }
           },
-          "ApiGatewayResourceListar": {
+          "ApiGatewayResourceApilist": {
             "Type": "AWS::ApiGateway::Resource",
             "Properties": {
               "ParentId": {
@@ -529,13 +529,13 @@
                   "RootResourceId"
                 ]
               },
-              "PathPart": "listar",
+              "PathPart": "api_list",
               "RestApiId": {
                 "Ref": "ApiGatewayRestApi"
               }
             }
           },
-          "ApiGatewayResourceEnviarsms": {
+          "ApiGatewayResourceApisms": {
             "Type": "AWS::ApiGateway::Resource",
             "Properties": {
               "ParentId": {
@@ -544,13 +544,13 @@
                   "RootResourceId"
                 ]
               },
-              "PathPart": "enviarsms",
+              "PathPart": "api_sms",
               "RestApiId": {
                 "Ref": "ApiGatewayRestApi"
               }
             }
           },
-          "ApiGatewayMethodReaddbOptions": {
+          "ApiGatewayMethodApimysqlOptions": {
             "Type": "AWS::ApiGateway::Method",
             "Properties": {
               "AuthorizationType": "NONE",
@@ -588,14 +588,14 @@
                 ]
               },
               "ResourceId": {
-                "Ref": "ApiGatewayResourceReaddb"
+                "Ref": "ApiGatewayResourceApimysql"
               },
               "RestApiId": {
                 "Ref": "ApiGatewayRestApi"
               }
             }
           },
-          "ApiGatewayMethodListarOptions": {
+          "ApiGatewayMethodApilistOptions": {
             "Type": "AWS::ApiGateway::Method",
             "Properties": {
               "AuthorizationType": "NONE",
@@ -633,14 +633,14 @@
                 ]
               },
               "ResourceId": {
-                "Ref": "ApiGatewayResourceListar"
+                "Ref": "ApiGatewayResourceApilist"
               },
               "RestApiId": {
                 "Ref": "ApiGatewayRestApi"
               }
             }
           },
-          "ApiGatewayMethodEnviarsmsOptions": {
+          "ApiGatewayMethodApismsOptions": {
             "Type": "AWS::ApiGateway::Method",
             "Properties": {
               "AuthorizationType": "NONE",
@@ -678,20 +678,20 @@
                 ]
               },
               "ResourceId": {
-                "Ref": "ApiGatewayResourceEnviarsms"
+                "Ref": "ApiGatewayResourceApisms"
               },
               "RestApiId": {
                 "Ref": "ApiGatewayRestApi"
               }
             }
           },
-          "ApiGatewayMethodReaddbGet": {
+          "ApiGatewayMethodApimysqlGet": {
             "Type": "AWS::ApiGateway::Method",
             "Properties": {
               "HttpMethod": "GET",
               "RequestParameters": {},
               "ResourceId": {
-                "Ref": "ApiGatewayResourceReaddb"
+                "Ref": "ApiGatewayResourceApimysql"
               },
               "RestApiId": {
                 "Ref": "ApiGatewayRestApi"
@@ -874,13 +874,13 @@
               "ConsultardbLambdaPermissionApiGateway"
             ]
           },
-          "ApiGatewayMethodListarGet": {
+          "ApiGatewayMethodApilistGet": {
             "Type": "AWS::ApiGateway::Method",
             "Properties": {
               "HttpMethod": "GET",
               "RequestParameters": {},
               "ResourceId": {
-                "Ref": "ApiGatewayResourceListar"
+                "Ref": "ApiGatewayResourceApilist"
               },
               "RestApiId": {
                 "Ref": "ApiGatewayRestApi"
@@ -1063,13 +1063,13 @@
               "ListarLambdaPermissionApiGateway"
             ]
           },
-          "ApiGatewayMethodEnviarsmsGet": {
+          "ApiGatewayMethodApismsGet": {
             "Type": "AWS::ApiGateway::Method",
             "Properties": {
               "HttpMethod": "GET",
               "RequestParameters": {},
               "ResourceId": {
-                "Ref": "ApiGatewayResourceEnviarsms"
+                "Ref": "ApiGatewayResourceApisms"
               },
               "RestApiId": {
                 "Ref": "ApiGatewayRestApi"
@@ -1252,7 +1252,7 @@
               "EnviarsmsLambdaPermissionApiGateway"
             ]
           },
-          "ApiGatewayDeployment1637262869119": {
+          "ApiGatewayDeployment1637619774157": {
             "Type": "AWS::ApiGateway::Deployment",
             "Properties": {
               "RestApiId": {
@@ -1261,12 +1261,12 @@
               "StageName": "dev"
             },
             "DependsOn": [
-              "ApiGatewayMethodReaddbOptions",
-              "ApiGatewayMethodListarOptions",
-              "ApiGatewayMethodEnviarsmsOptions",
-              "ApiGatewayMethodReaddbGet",
-              "ApiGatewayMethodListarGet",
-              "ApiGatewayMethodEnviarsmsGet"
+              "ApiGatewayMethodApimysqlOptions",
+              "ApiGatewayMethodApilistOptions",
+              "ApiGatewayMethodApismsOptions",
+              "ApiGatewayMethodApimysqlGet",
+              "ApiGatewayMethodApilistGet",
+              "ApiGatewayMethodApismsGet"
             ]
           },
           "ConsultardbLambdaPermissionApiGateway": {
@@ -1466,14 +1466,14 @@
             "Type": "AWS::RDS::DBInstance",
             "Properties": {
               "DBInstanceIdentifier": "BibliotecaServerless",
-              "DBName": "BibliotecaServerless",
+              "DBName": "serverlessexemploaplicacao",
               "DBInstanceClass": "db.t2.micro",
               "AllocatedStorage": 20,
               "StorageType": "gp2",
               "Engine": "MySQL",
               "EngineVersion": "8.0.23",
-              "MasterUsername": "lucio_helter",
-              "MasterUserPassword": "14302134",
+              "MasterUsername": "teste321",
+              "MasterUserPassword": "1234teste321",
               "PubliclyAccessible": true,
               "AvailabilityZone": "us-east-1a",
               "CACertificateIdentifier": "rds-ca-2019",
@@ -1504,7 +1504,7 @@
           "ObjetocriadoLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "ObjetocriadoLambdaVersionu8GzABza3BEQs9N93vBmSnk2XxT0yLPlPJt1a6gOzk"
+              "Ref": "ObjetocriadoLambdaVersionH1eoouauZB4PfJceFIAW4EccQw4ZSFHSYuflItLHI"
             },
             "Export": {
               "Name": "sls-bibliotecaserverless-dev-ObjetocriadoLambdaFunctionQualifiedArn"
@@ -1513,7 +1513,7 @@
           "ConsultardbLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "ConsultardbLambdaVersion1OP7rXyg90TmEdnMqF5zTASdwIEexomj0wfOZDH2wM"
+              "Ref": "ConsultardbLambdaVersionIQ5Ceo0cbJozDiJrTRzApSe4t9jQAv3o5Dyfq7swA8"
             },
             "Export": {
               "Name": "sls-bibliotecaserverless-dev-ConsultardbLambdaFunctionQualifiedArn"
@@ -1522,7 +1522,7 @@
           "ListarLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "ListarLambdaVersionnX93hGybhO6ThITfmbJwmnvqNdDdy6HC2TGA5dcltys"
+              "Ref": "ListarLambdaVersionrINNOByBnUTIHGSTlL1RRLF2zlyGMkyedy7YVkn00I"
             },
             "Export": {
               "Name": "sls-bibliotecaserverless-dev-ListarLambdaFunctionQualifiedArn"
@@ -1531,7 +1531,7 @@
           "EnviarsmsLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "EnviarsmsLambdaVersionuvv7hIw0gbO9fVa7iOFSo0xWHZYkwNU63rZ7JQIw8A"
+              "Ref": "EnviarsmsLambdaVersion20tL2IHtMuqvBXQZiThcIA9Hcl0T69VdqTDjZLgV7ns"
             },
             "Export": {
               "Name": "sls-bibliotecaserverless-dev-EnviarsmsLambdaFunctionQualifiedArn"
@@ -1565,7 +1565,7 @@
           },
           "BucketName": {
             "Description": "Nome do Bucket",
-            "Value": "teste321hhelter",
+            "Value": "exemplobucketname",
             "Export": {
               "Name": "BucketName"
             }
@@ -1589,7 +1589,7 @@
               "Ref": "CognitoUserPoolClient"
             }
           },
-          "EndpointAddress": {
+          "EndpointAddressDBRDS": {
             "Description": "Endereco do endpoint do RDS Mysql.",
             "Value": {
               "Fn::GetAtt": [
@@ -1720,17 +1720,17 @@
       "vpc": {}
     },
     "custom": {
-      "bucket": "teste321hhelter",
-      "DBNameRDS": "BibliotecaServerless",
-      "MasteruserRDS": "lucio_helter",
-      "PassworduserRDS": "14302134",
+      "bucket": "exemplobucketname",
+      "DBNameRDS": "serverlessexemploaplicacao",
+      "MasteruserRDS": "teste321",
+      "PassworduserRDS": "1234teste321",
       "defaultStage": "dev",
       "currentStage": "dev",
       "userPoolName": "test-user-pool-dev",
       "userPoolClientName": "test-user-pool-client-dev",
       "remover": {
         "buckets": [
-          "teste321hhelter"
+          "exemplobucketname"
         ]
       },
       "output": {
@@ -1749,7 +1749,7 @@
         "events": [
           {
             "s3": {
-              "bucket": "teste321hhelter",
+              "bucket": "exemplobucketname",
               "event": "s3:ObjectCreated:*",
               "private": false,
               "cors": true,
@@ -1770,14 +1770,14 @@
         "timeout": 6,
         "runtime": "nodejs14.x",
         "vpc": {},
-        "versionLogicalId": "ObjetocriadoLambdaVersionu8GzABza3BEQs9N93vBmSnk2XxT0yLPlPJt1a6gOzk"
+        "versionLogicalId": "ObjetocriadoLambdaVersionH1eoouauZB4PfJceFIAW4EccQw4ZSFHSYuflItLHI"
       },
       "consultardb": {
         "handler": "handler.consultardb",
         "events": [
           {
             "http": {
-              "path": "readdb",
+              "path": "api_mysql",
               "method": "get",
               "integration": "AWS",
               "private": false,
@@ -1840,14 +1840,14 @@
         "timeout": 6,
         "runtime": "nodejs14.x",
         "vpc": {},
-        "versionLogicalId": "ConsultardbLambdaVersion1OP7rXyg90TmEdnMqF5zTASdwIEexomj0wfOZDH2wM"
+        "versionLogicalId": "ConsultardbLambdaVersionIQ5Ceo0cbJozDiJrTRzApSe4t9jQAv3o5Dyfq7swA8"
       },
       "listar": {
         "handler": "handler.listar",
         "events": [
           {
             "http": {
-              "path": "listar",
+              "path": "api_list",
               "method": "get",
               "integration": "AWS",
               "private": false,
@@ -1884,14 +1884,14 @@
         "timeout": 6,
         "runtime": "nodejs14.x",
         "vpc": {},
-        "versionLogicalId": "ListarLambdaVersionnX93hGybhO6ThITfmbJwmnvqNdDdy6HC2TGA5dcltys"
+        "versionLogicalId": "ListarLambdaVersionrINNOByBnUTIHGSTlL1RRLF2zlyGMkyedy7YVkn00I"
       },
       "enviarsms": {
         "handler": "handler.enviarsms",
         "events": [
           {
             "http": {
-              "path": "enviarsms",
+              "path": "api_sms",
               "method": "get",
               "integration": "AWS",
               "private": false,
@@ -1931,7 +1931,7 @@
         "timeout": 6,
         "runtime": "nodejs14.x",
         "vpc": {},
-        "versionLogicalId": "EnviarsmsLambdaVersionuvv7hIw0gbO9fVa7iOFSo0xWHZYkwNU63rZ7JQIw8A"
+        "versionLogicalId": "EnviarsmsLambdaVersion20tL2IHtMuqvBXQZiThcIA9Hcl0T69VdqTDjZLgV7ns"
       }
     },
     "resources": {
@@ -2022,14 +2022,14 @@
           "Type": "AWS::RDS::DBInstance",
           "Properties": {
             "DBInstanceIdentifier": "BibliotecaServerless",
-            "DBName": "BibliotecaServerless",
+            "DBName": "serverlessexemploaplicacao",
             "DBInstanceClass": "db.t2.micro",
             "AllocatedStorage": 20,
             "StorageType": "gp2",
             "Engine": "MySQL",
             "EngineVersion": "8.0.23",
-            "MasterUsername": "lucio_helter",
-            "MasterUserPassword": "14302134",
+            "MasterUsername": "teste321",
+            "MasterUserPassword": "1234teste321",
             "PubliclyAccessible": true,
             "AvailabilityZone": "us-east-1a",
             "CACertificateIdentifier": "rds-ca-2019",
@@ -2051,7 +2051,7 @@
       "Outputs": {
         "BucketName": {
           "Description": "Nome do Bucket",
-          "Value": "teste321hhelter",
+          "Value": "exemplobucketname",
           "Export": {
             "Name": "BucketName"
           }
@@ -2075,7 +2075,7 @@
             "Ref": "CognitoUserPoolClient"
           }
         },
-        "EndpointAddress": {
+        "EndpointAddressDBRDS": {
           "Description": "Endereco do endpoint do RDS Mysql.",
           "Value": {
             "Fn::GetAtt": [
@@ -2156,7 +2156,7 @@
     "artifact": "C:\\xampp\\htdocs\\serverless\\NovaversaoTCC\\.serverless\\bibliotecaserverless.zip"
   },
   "package": {
-    "artifactDirectoryName": "serverless/bibliotecaserverless/dev/1637262885231-2021-11-18T19:14:45.231Z",
+    "artifactDirectoryName": "serverless/bibliotecaserverless/dev/1637619787173-2021-11-22T22:23:07.173Z",
     "artifact": "bibliotecaserverless.zip"
   }
 }

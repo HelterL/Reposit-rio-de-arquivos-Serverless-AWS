@@ -1,5 +1,5 @@
 //import { enviarSMS } from './register_sms';
-document.write(unescape("%3Cscript src='./back-end/register_sms.js' type='text/javascript'%3E%3C/script%3E"));
+document.write(unescape("%3Cscript src='../back-end/register_sms.js' type='text/javascript'%3E%3C/script%3E"));
 	
 		var username;
 		var password;
