@@ -8,6 +8,7 @@ O aplicativo mostra como criar um projeto sem servidor com Amazon cognito, Amazo
 * [Apresentação serviços AWS](#apresentação-serviços-aws)
 * [Arquitetura](#arquitetura)
 * [Instalação](#instalação)
+* [Visão Geral da aplicação](#visão-geral-da-aplicação)
 
 ## Recursos
 - Registrar usuário
@@ -109,6 +110,7 @@ Dentro do arquivo **back-end/register_sms.js** adicione o endpoint da API SMS de
 Essas informações podem ser encontradas no arquivo **outputs.toml** nas linhas 2 e 5, mas cuidado para não se confundir e após isso salve, Exemplo :
 
 ```
+
 window._config = {
     cognito: {
         userPoolId: "us-east-1_AlJsadjASHF", // UserPoolId
@@ -129,8 +131,7 @@ Após isso, clique em **Teste connection** para verificar se a conexão com o ba
 
 ![img](./IMG/workbench_autenticacao2.png)
 
-9. Após a conexão ser um sucesso, clique em **close** e duplo clique na caixa que foi criada com o nome da conexão que foi criada.<br>
-Dentro do banco de dados execute os comandos a seguir, altere o **nome-do-banco-de-dados** para o nome do banco que foi dado no inicio;
+9. Após a conexão ser um sucesso, clique em **close** e duplo clique na caixa que foi criada com o nome da conexão que foi criada. Dentro do banco de dados execute os comandos a seguir, altere o **nome-do-banco-de-dados** para o nome do banco que foi dado no inicio;
 
 ```
 
@@ -153,9 +154,22 @@ Após isso clique no raio na parte superior, segue exemplo.
 Lembrando, isso não é recomendado mas aqui é apenas para uso de demonstração. Segue exemplo.
 ![img](./IMG/permission_s3.png)
 
-11. Finalização da stack e remoção de todos os recursos criados. Execute o seguinte comando.<br>
+11. Após isso, entre no arquivo **front-end/index.html** e aproveite!
+
+12. Finalização da stack e remoção de todos os recursos criados. Execute o seguinte comando.<br>
 
 ```
 serverless remove
 
 ```
+
+## Visão Geral da aplicação
+
+1. Página de cadastro ``` register.html ```<br>
+Cadastre um usuário usando o pool de usuários do Amazon Cognito.
+![img](./IMG/cadastro.png)
+
+2. Página de Login ``` login.html ```<br>
+Faça login utilizando o pool de usuários do Amazon Cognito. 
+![img](./IMG/login.png)
+
