@@ -173,3 +173,7 @@ Cadastre um usuário usando o pool de usuários do Amazon Cognito.
 Faça login utilizando o pool de usuários do Amazon Cognito. 
 ![img](./IMG/login.png)
 
+3. Página de recuperação de senha ```recoverpassword.html ``` <br>
+![img](./IMG/recuperacao_senha.png)
+
+
